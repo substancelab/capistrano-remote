@@ -1,3 +1,4 @@
+require "capistrano/remote/runner"
 require "capistrano/remote/version"
 
 # Load the actual tasks
