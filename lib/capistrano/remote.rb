@@ -1,7 +1,4 @@
 require "capistrano/remote/version"
 
-module Capistrano
-  module Remote
-    # Your code goes here...
-  end
-end
+# Load the actual tasks
+load File.expand_path('../tasks/remote.rake', __FILE__)
