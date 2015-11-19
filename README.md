@@ -1,6 +1,6 @@
 # Capistrano Remote
 
-Every so often you need to look at your production data or otherwise run some manual maintenance tasks in your production Rails application.
+Ever so often you need to look at your production data or otherwise run some manual maintenance tasks in your production Rails application.
 
 Sure, you could SSH to the server, find the proper path, and remember the correct invocation for your rails console, but we already have an SSH automation tool; Capistrano.
 
@@ -43,7 +43,7 @@ Or install it yourself as:
 
 ## Usage
 
-Add to Capfile:
+Add to `Capfile`:
 
     require "capistrano/remote"
 
