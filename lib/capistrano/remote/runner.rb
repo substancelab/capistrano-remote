@@ -8,7 +8,7 @@ module Capistrano
       end
 
       def run_interactively(command)
-        remote_command = "cd #{current_path} && #{bundle_command} exec rails #{command}"
+        remote_command = "cd #{current_path} && #{rails_command(command)}"
         local_command = "ssh -l #{user} #{hostname} -t \"#{remote_command}\""
         exec local_command
       end
@@ -21,6 +21,10 @@ module Capistrano
 
       def hostname
         host.hostname
+      end
+
+      def rails_command(command)
+        "#{bundle_command} exec rails #{command}"
       end
 
       def user

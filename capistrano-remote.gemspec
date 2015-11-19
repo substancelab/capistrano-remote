@@ -9,8 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Jakob Skjerning"]
   spec.email         = ["jakob@mentalized.net"]
 
-  spec.summary       = "Capistrano tasks to start a Rails console or dbconsole on your servers"
-  spec.description   = <<-EOF
+  spec.summary = \
+    "Capistrano tasks to start a Rails console or dbconsole on your servers"
+  spec.description = <<-EOF
     Every so often you need to look at your production data or otherwise run
     some manual maintenance tasks in your production Rails application.
 
@@ -21,7 +22,9 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/substancelab/capistrano-remote"
   spec.license       = "MIT"
 
-  spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
+  spec.files         = `git ls-files -z`.split("\x0").reject { |f|
+    f.match(%r{^(test|spec|features)/})
+  }
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
