@@ -4,7 +4,7 @@ Every so often you need to look at your production data or otherwise run some ma
 
 Sure, you could SSH to the server, find the proper path, and remember the correct invocation for your rails console, but we already have an SSH automation tool; Capistrano.
 
-This gem adds tasks to Capistrano that lets you start a Rails console or dbconsole on your servers without manually SSH'ing:
+This gem adds tasks to Capistrano that lets you run rake tasks or start a Rails console or dbconsole on your servers without manually SSH'ing:
 
 ## Examples
 
@@ -22,6 +22,14 @@ This gem adds tasks to Capistrano that lets you start a Rails console or dbconso
     Type "help" for help.
     
     example_production=>
+
+### Rake tasks
+
+    $ cap production remote:rake task=about
+    About your application's environment
+    Rails version             4.2.5.1
+    Ruby version              2.3.0-p0 (x86_64-linux)
+    [...]
 
 
 ## Installation
