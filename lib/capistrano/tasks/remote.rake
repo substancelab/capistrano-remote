@@ -19,7 +19,8 @@ namespace :remote do
     end
   end
 
-  desc 'Run a remote rake task. Specify the task to run using the `task` environment variable.'
+  desc 'Run a remote rake task.
+    Specify the task to run using the `task` environment variable.'
   task :rake do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
