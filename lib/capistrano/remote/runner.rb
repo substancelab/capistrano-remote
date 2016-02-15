@@ -9,14 +9,12 @@ module Capistrano
 
       def rake(task)
         remote_command = "cd #{current_path} && #{rake_command(task)}"
-        local_command = "ssh -l #{user} #{hostname} -t \"#{remote_command}\""
-        exec local_command
+        run_interactively(remote_command)
       end
 
-      def run_interactively(command)
+      def rails(command)
         remote_command = "cd #{current_path} && #{rails_command(command)}"
-        local_command = "ssh -l #{user} #{hostname} -t \"#{remote_command}\""
-        exec local_command
+        run_interactively(remote_command)
       end
 
       private
@@ -36,6 +34,11 @@ module Capistrano
       def rake_command(arguments)
         command = fetch(:rake_command, SSHKit.config.command_map[:rake])
         "#{command} #{arguments}"
+      end
+
+      def run_interactively(remote_command)
+        local_command = "ssh -l #{user} #{hostname} -t \"#{remote_command}\""
+        exec local_command
       end
 
       def user

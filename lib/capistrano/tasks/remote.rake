@@ -3,7 +3,7 @@ namespace :remote do
   task :console do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
-      Capistrano::Remote::Runner.new(host).run_interactively(
+      Capistrano::Remote::Runner.new(host).rails(
         "console #{rails_env}"
       )
     end
@@ -13,7 +13,7 @@ namespace :remote do
   task :dbconsole do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
-      Capistrano::Remote::Runner.new(host).run_interactively(
+      Capistrano::Remote::Runner.new(host).rails(
         "dbconsole #{rails_env} -p"
       )
     end
