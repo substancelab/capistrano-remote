@@ -1,5 +1,6 @@
 module Capistrano
-  module Remote
+  module Remote # :nodoc:
+    # The primary interface for actually running tasks on a remote host.
     class Runner
       attr_reader :host
 
