@@ -8,13 +8,11 @@ module Capistrano
       end
 
       def rake(task)
-        remote_command = "cd #{current_path} && #{rake_command(task)}"
-        run_interactively(remote_command)
+        run_interactively(in_current_path(rake_command(task)))
       end
 
       def rails(command)
-        remote_command = "cd #{current_path} && #{rails_command(command)}"
-        run_interactively(remote_command)
+        run_interactively(in_current_path(rails_command(command)))
       end
 
       private
@@ -25,6 +23,10 @@ module Capistrano
 
       def hostname
         host.hostname
+      end
+
+      def in_current_path(command)
+        "cd #{current_path} && #{command}"
       end
 
       def rails_command(command)
