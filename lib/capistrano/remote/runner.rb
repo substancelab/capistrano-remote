@@ -40,7 +40,13 @@ module Capistrano
       end
 
       def run_interactively(remote_command)
-        local_command = "ssh -l #{user} #{hostname} -t \"#{remote_command}\""
+        parts = [
+          'ssh',
+          (user ? "-l #{user}" : nil),
+          hostname,
+          "-t \"#{remote_command}\""
+        ]
+        local_command = parts.compact.join(' ')
         exec local_command
       end
 
