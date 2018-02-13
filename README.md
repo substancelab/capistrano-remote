@@ -6,7 +6,7 @@ Sure, you could SSH to the server, find the proper path, and remember the correc
 
 This gem adds tasks to Capistrano that lets you run rake tasks or start a Rails console or dbconsole on your servers without manually SSH'ing:
 
-## Examples
+## Usage
 
 ### Rails console
 
@@ -40,6 +40,10 @@ Add this line to your application's Gemfile:
 gem "capistrano-remote", :require => false
 ```
 
+And this to your Capfile:
+
+    require "capistrano/remote"
+
 And then execute:
 
     $ bundle
@@ -47,13 +51,6 @@ And then execute:
 Or install it yourself as:
 
     $ gem install capistrano-remote
-
-
-## Usage
-
-Add to Capfile:
-
-    require "capistrano/remote"
 
 
 ## Development
