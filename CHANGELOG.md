@@ -5,6 +5,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
+...
+
+## [0.2.1] - 2018-02-13
+
 ### Fixed
 
 - We no longer construct a faulty local command when the SSH username isn't set
