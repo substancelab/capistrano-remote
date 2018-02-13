@@ -8,7 +8,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - We no longer construct a faulty local command when the SSH username isn't set
-
+- Ensure we shellescape the remote command to prevent issues when it contains special characters, like references to ENV variables.
 
 ## [0.2.0] - 2016-02-15
 
