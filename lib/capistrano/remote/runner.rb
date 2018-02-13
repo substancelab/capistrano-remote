@@ -44,7 +44,7 @@ module Capistrano
           'ssh',
           (user ? "-l #{user}" : nil),
           hostname,
-          "-t \"#{remote_command}\""
+          "-t #{Shellwords.escape(remote_command)}"
         ]
         local_command = parts.compact.join(' ')
         exec local_command
