@@ -1,5 +1,7 @@
 # Capistrano Remote
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/c69e3398c8ea206d3876/maintainability)](https://codeclimate.com/github/substancelab/capistrano-remote/maintainability)
+
 Every so often you need to look at your production data or otherwise run some manual maintenance tasks in your production Rails application.
 
 Sure, you could SSH to the server, find the proper path, and remember the correct invocation for your rails console, but we already have an SSH automation tool; Capistrano.
