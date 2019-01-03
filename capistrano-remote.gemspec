@@ -1,5 +1,4 @@
-# coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'capistrano/remote/version'
 
@@ -11,13 +10,13 @@ Gem::Specification.new do |spec|
 
   spec.summary = \
     'Capistrano tasks to start a Rails console or dbconsole on your servers'
-  spec.description = <<-EOF
+  spec.description = <<-DESCRIPTION
     Every so often you need to look at your production data or otherwise run
     some manual maintenance tasks in your production Rails application.
 
     This gem adds tasks to Capistrano that lets you start a Rails console or
     dbconsole on your servers without manually SSH'ing.
-  EOF
+  DESCRIPTION
 
   spec.homepage      = 'https://github.com/substancelab/capistrano-remote'
   spec.license       = 'MIT'
