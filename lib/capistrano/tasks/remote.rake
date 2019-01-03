@@ -1,3 +1,4 @@
+# rubocop:disable Metrics/BlockLength
 namespace :remote do
   desc 'Run and attach to a remote Rails console'
   task :console do
@@ -30,3 +31,4 @@ namespace :remote do
     end
   end
 end
+# rubocop:enable Metrics/BlockLength
