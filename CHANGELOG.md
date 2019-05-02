@@ -5,7 +5,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## Unreleased
 
-...
+### Added
+
+- cap remote:console is now ready for Rails 6. (@ifsc01)
 
 ## [0.2.1] - 2018-02-13
 
