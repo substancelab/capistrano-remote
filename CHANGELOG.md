@@ -15,7 +15,9 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
--
+- Requirements for Bundler versions have been relaxed. We should work just fine on 10.0 and forward as we have done since the beginning of the project.
+
+- Requirements for Rake versions have been relaxed. We should work just fine on 1.17 and forward as we have done since the beginning of the project.
 
 ## [0.3.0] - 2019-09-25
 
