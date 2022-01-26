@@ -1,6 +1,5 @@
-# rubocop:disable Metrics/BlockLength
 namespace :remote do
-  desc 'Run and attach to a remote Rails console'
+  desc "Run and attach to a remote Rails console"
   task :console do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
@@ -10,7 +9,7 @@ namespace :remote do
     end
   end
 
-  desc 'Run and attach to a remote Rails database console'
+  desc "Run and attach to a remote Rails database console"
   task :dbconsole do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
@@ -26,7 +25,7 @@ namespace :remote do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
       Capistrano::Remote::Runner.new(host).rake(
-        "RAILS_ENV=#{rails_env} #{ENV['task']}"
+        "RAILS_ENV=#{rails_env} #{ENV["task"]}"
       )
     end
   end
