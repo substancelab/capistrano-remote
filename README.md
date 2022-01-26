@@ -55,6 +55,11 @@ Or install it yourself as:
     $ gem install capistrano-remote
 
 
+## Alternatives
+
+- If you just need a remote Rails console [capistrano-rails-console](https://gitlab.com/ydkn/capistrano-rails-console) might be a better fit.
+
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
