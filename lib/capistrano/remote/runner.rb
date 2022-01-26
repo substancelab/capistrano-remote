@@ -41,12 +41,12 @@ module Capistrano
 
       def run_interactively(remote_command)
         parts = [
-          'ssh',
+          "ssh",
           (user ? "-l #{user}" : nil),
           hostname,
           "-t #{Shellwords.escape(remote_command)}"
         ]
-        local_command = parts.compact.join(' ')
+        local_command = parts.compact.join(" ")
         exec local_command
       end
 
