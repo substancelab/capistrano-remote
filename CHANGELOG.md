@@ -7,11 +7,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
--
-
-### Fixed
-
--
+- Compatibility with Rails 7+. We no longer pass the environment to dbconsole in a deprecated way. (@glaszig)
 
 ### Changed
 
