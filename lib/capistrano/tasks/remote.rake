@@ -14,7 +14,7 @@ namespace :remote do
     rails_env = fetch(:rails_env)
     on roles(:db) do |host|
       Capistrano::Remote::Runner.new(host).rails(
-        "dbconsole #{rails_env} -p"
+        "dbconsole -e #{rails_env} -p"
       )
     end
   end
